@@ -1,4 +1,3 @@
-import { Heart } from "lucide-react"
 import { events, wedding } from "@/lib/wedding-data"
 import { HometownSketch, hometowns } from "@/components/schedule-section"
 
@@ -24,7 +23,8 @@ export function Hero() {
         </div>
         <p className="tracking-luxe text-xs uppercase text-[#746b60]">Together with our families</p>
         <h1 className="mt-7 font-serif text-[clamp(4.7rem,12vw,10rem)] font-normal italic leading-[0.88] tracking-tight">
-          {wedding.partnerOne} <span className="text-[#a37b68]">&amp;</span> {wedding.partnerTwo}
+          <span className="block">Siddhartha <span className="text-[#a37b68]">&amp;</span></span>
+          <span className="mt-2 block leading-none">Meher Pooja</span>
         </h1>
         <p className="mx-auto mt-9 max-w-xl font-serif text-2xl italic text-[#766d61] sm:text-3xl">We would love to celebrate with you</p>
         <div className="mx-auto mt-8 h-px w-36 bg-[#b7a99a]" aria-hidden="true" />
@@ -32,11 +32,11 @@ export function Hero() {
           {events.map((event, index) => (
             <div key={event.id} className="w-full">
               {index > 0 && <span aria-hidden="true" className="mb-5 block font-serif text-3xl italic text-[#a37b68]">&amp;</span>}
-              <a href={event.id === "pre-wedding" ? "/pre-wedding" : "/wedding"} className="group relative inline-flex flex-col items-center px-9 py-2 transition-colors hover:text-[#b4232e] focus-visible:text-[#b4232e] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#514c45]">
-                <Heart aria-hidden="true" className="absolute left-0 top-1/2 size-5 -translate-y-1/2 fill-[#b4232e] text-[#b4232e] opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100" />
+              <div className="inline-flex flex-col items-center px-9 py-2">
                 <span className="font-serif text-3xl italic sm:text-4xl">{event.name}</span>
                 <span className="mt-1 text-sm text-[#766d61]">{event.dateLabel}</span>
-              </a>
+                <span className="mt-1 text-xs tracking-wide text-[#766d61]">{event.timeLabel}</span>
+              </div>
             </div>
           ))}
         </div>

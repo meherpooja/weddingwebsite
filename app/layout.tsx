@@ -20,7 +20,7 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: 'Sid & Pooja — We\'re Getting Married',
   description:
-    'Join Sid and Pooja in Atlanta, Georgia for their pre-wedding celebration on November 25 and wedding on November 27, 2026. Explore both events and venue details.',
+    'Join Sid and Pooja at Banjara Banquets in Cumming, Georgia for their pre-wedding celebration on November 25 and wedding on November 27, 2026.',
   generator: 'v0.app',
   icons: {
     icon: [

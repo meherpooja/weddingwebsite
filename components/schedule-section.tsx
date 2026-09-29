@@ -1,9 +1,9 @@
 import { events, wedding } from "@/lib/wedding-data"
 
-type Hometown = "nizambad" | "nalgonda" | "atlanta" | "new-jersey"
+type Hometown = "nizamabad" | "nalgonda" | "atlanta" | "new-jersey"
 
 export const hometowns: { kind: Hometown; name: string }[] = [
-  { kind: "nizambad", name: "Nizambad" },
+  { kind: "nizamabad", name: "Nizamabad" },
   { kind: "atlanta", name: "Atlanta" },
   { kind: "nalgonda", name: "Nalgonda" },
   { kind: "new-jersey", name: "New Jersey" },
@@ -13,7 +13,7 @@ export function HometownSketch({ kind, name }: { kind: Hometown; name: string })
   return (
     <figure className="w-28 text-center text-[#827769] sm:w-36 xl:w-60">
       <svg viewBox="0 0 240 150" className="h-auto w-full" fill="none" stroke="currentColor" strokeWidth="1.45" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        {kind === "nizambad" && (
+        {kind === "nizamabad" && (
           <>
             <path d="M15 124h210M27 116h186M39 49h162v67M48 49l15-18h114l15 18M76 31V19h88v12M112 19V11h16v8M55 61h130M56 116V61m128 55V61M82 116V77h76v39M95 116V88h50v28" />
             <path d="M63 61v-9m20 9v-9m20 9v-9m20 9v-9m20 9v-9m20 9v-9M11 132c39-7 57-2 83 0m35 0c40-7 65-4 102 0" />
